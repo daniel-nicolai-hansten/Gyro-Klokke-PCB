@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP LB1948MC
+D Dual full bridge motor driver, up to 46V, 4A, Multiwatt-15
+K H-bridge motor driver
+F http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/CD00000240.pdf
+$ENDCMP
+#
+#End Doc Library
