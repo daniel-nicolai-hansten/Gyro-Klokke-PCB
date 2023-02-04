@@ -182,17 +182,6 @@ Wire Wire Line
 Wire Wire Line
 	9200 1300 9300 1300
 $Comp
-L Connector:Conn_01x04_Male J3
-U 1 1 5FC5C45F
-P 3500 1300
-F 0 "J3" H 3472 1232 50  0000 R CNN
-F 1 "Conn_01x03_Male" H 3472 1323 50  0000 R CNN
-F 2 "Connector_Molex:Molex_PicoBlade_53398-0471_1x04-1MP_P1.25mm_Vertical" H 3500 1300 50  0001 C CNN
-F 3 "~" H 3500 1300 50  0001 C CNN
-	1    3500 1300
-	-1   0    0    1   
-$EndComp
-$Comp
 L power:+3.3V #PWR0110
 U 1 1 5FC5E72D
 P 3300 1100
@@ -216,10 +205,6 @@ F 3 "" H 3300 1500 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	3300 1400 3300 1450
-Text GLabel 3250 1200 0    50   Input ~ 0
-uart-TX
-Wire Wire Line
-	3250 1300 3300 1300
 $Comp
 L Device:Crystal_Small Y1
 U 1 1 5FC778A0
@@ -251,11 +236,6 @@ Wire Wire Line
 	3300 1100 3000 1100
 Wire Wire Line
 	2700 1100 2700 1150
-Connection ~ 3300 1100
-Text GLabel 3250 1300 0    50   Input ~ 0
-uart-RX
-Wire Wire Line
-	3250 1200 3300 1200
 $Comp
 L Connector:Conn_01x01_Female J6
 U 1 1 5FD8C1C4
@@ -615,7 +595,7 @@ Wire Wire Line
 Wire Wire Line
 	3000 5150 3200 5150
 $Comp
-L nrfmicro:E73-2G4M08S1C-52840 U1
+L Gyro-klokke-PCB-rescue:E73-2G4M08S1C-52840-nrfmicro U1
 U 1 1 60A5065E
 P 3900 5850
 F 0 "U1" H 3875 7215 50  0000 C CNN
@@ -654,10 +634,10 @@ Wire Wire Line
 Wire Wire Line
 	1650 5300 1650 5250
 $Comp
-L power:VCC #PWR?
+L power:VCC #PWR02
 U 1 1 60B2C84F
 P 3000 1100
-F 0 "#PWR?" H 3000 950 50  0001 C CNN
+F 0 "#PWR02" H 3000 950 50  0001 C CNN
 F 1 "VCC" H 3015 1273 50  0000 C CNN
 F 2 "" H 3000 1100 50  0001 C CNN
 F 3 "" H 3000 1100 50  0001 C CNN
@@ -667,4 +647,130 @@ $EndComp
 Connection ~ 3000 1100
 Wire Wire Line
 	3000 1100 2700 1100
+$Comp
+L nrfmicro:USB_C_Receptacle_USB2.0 J7
+U 1 1 60E6A41F
+P 1200 1700
+F 0 "J7" H 1307 2567 50  0000 C CNN
+F 1 "USB_C_Receptacle_USB2.0" H 1307 2476 50  0000 C CNN
+F 2 "nrfmicro:USB-C_C168688" H 1350 1700 50  0001 C CNN
+F 3 "" H 1350 1700 50  0001 C CNN
+	1    1200 1700
+	1    0    0    -1  
+$EndComp
+Text Label 1800 1100 0    50   ~ 0
+VBUS
+Text Label 2000 1600 0    50   ~ 0
+D-
+Text Label 2000 1800 0    50   ~ 0
+D+
+$Comp
+L power:GNDREF #PWR01
+U 1 1 60E74F5B
+P 1050 2800
+F 0 "#PWR01" H 1050 2550 50  0001 C CNN
+F 1 "GNDREF" H 1055 2627 50  0000 C CNN
+F 2 "" H 1050 2800 50  0001 C CNN
+F 3 "" H 1050 2800 50  0001 C CNN
+	1    1050 2800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	900  2600 900  2700
+Wire Wire Line
+	900  2700 1050 2700
+Wire Wire Line
+	1050 2700 1050 2800
+Wire Wire Line
+	1050 2700 1200 2700
+Wire Wire Line
+	1200 2700 1200 2600
+Connection ~ 1050 2700
+Wire Wire Line
+	1800 1900 1900 1900
+Wire Wire Line
+	1900 1900 1900 1800
+Wire Wire Line
+	1900 1800 2000 1800
+Wire Wire Line
+	1800 1800 1900 1800
+Connection ~ 1900 1800
+Wire Wire Line
+	1800 1700 1900 1700
+Wire Wire Line
+	1900 1700 1900 1600
+Wire Wire Line
+	1900 1600 2000 1600
+Wire Wire Line
+	1800 1600 1900 1600
+Connection ~ 1900 1600
+Text Label 4650 6250 0    50   ~ 0
+D-
+Text Label 4650 6050 0    50   ~ 0
+D+
+Text Label 4900 6350 0    50   ~ 0
+VBUS
+Wire Wire Line
+	4550 6050 4650 6050
+Wire Wire Line
+	4650 6250 4550 6250
+Wire Wire Line
+	5150 6450 4550 6450
+$Comp
+L Connector:Conn_01x02_Female J8
+U 1 1 60EC4861
+P 5350 6350
+F 0 "J8" H 5378 6326 50  0000 L CNN
+F 1 "Conn_01x02_Female" H 5378 6235 50  0000 L CNN
+F 2 "Connector_PinHeader_1.27mm:PinHeader_2x01_P1.27mm_Vertical" H 5350 6350 50  0001 C CNN
+F 3 "~" H 5350 6350 50  0001 C CNN
+	1    5350 6350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4900 6350 5150 6350
+$Comp
+L Device:R_Small R1
+U 1 1 60ED462E
+P 1900 1300
+F 0 "R1" V 1704 1300 50  0000 C CNN
+F 1 "5.7K" V 1795 1300 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 1900 1300 50  0001 C CNN
+F 3 "~" H 1900 1300 50  0001 C CNN
+	1    1900 1300
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R_Small R2
+U 1 1 60ED58CD
+P 2200 1400
+F 0 "R2" V 2004 1400 50  0000 C CNN
+F 1 "5.7K" V 2095 1400 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 2200 1400 50  0001 C CNN
+F 3 "~" H 2200 1400 50  0001 C CNN
+	1    2200 1400
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GNDREF #PWR03
+U 1 1 60ED9E3B
+P 2400 1500
+F 0 "#PWR03" H 2400 1250 50  0001 C CNN
+F 1 "GNDREF" H 2405 1327 50  0000 C CNN
+F 2 "" H 2400 1500 50  0001 C CNN
+F 3 "" H 2400 1500 50  0001 C CNN
+	1    2400 1500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2000 1300 2400 1300
+Wire Wire Line
+	2400 1300 2400 1400
+Wire Wire Line
+	1800 1400 2100 1400
+Wire Wire Line
+	2300 1400 2400 1400
+Connection ~ 2400 1400
+Wire Wire Line
+	2400 1400 2400 1500
 $EndSCHEMATC

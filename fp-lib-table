@@ -1,3 +1,3 @@
 (fp_lib_table
-  (lib (name nrfmicro)(type KiCad)(uri C:/Users/daniel.hansten/Kicad/Gyro-Klokke-PCB/nrfmicro.pretty)(options "")(descr ""))
+  (lib (name nrfmicro)(type KiCad)(uri ${KIPRJMOD}/nrfmicro.pretty)(options "")(descr ""))
 )

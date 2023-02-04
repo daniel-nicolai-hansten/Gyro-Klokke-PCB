@@ -1,4 +1,5 @@
 (sym_lib_table
   (lib (name lb1948mc)(type Legacy)(uri ${KIPRJMOD}/lb1948mc.lib)(options "")(descr ""))
-  (lib (name nrfmicro)(type Legacy)(uri C:/Users/daniel.hansten/Kicad/Gyro-Klokke-PCB/nrfmicro.lib)(options "")(descr ""))
+  (lib (name Gyro-klokke-PCB-rescue)(type Legacy)(uri ${KIPRJMOD}/Gyro-klokke-PCB-rescue.lib)(options "")(descr ""))
+  (lib (name nrfmicro)(type Legacy)(uri ${KIPRJMOD}/nrfmicro.lib)(options "")(descr ""))
 )
